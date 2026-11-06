@@ -1,0 +1,93 @@
+{
+  "feature_order": [
+    "gender",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "ever_married",
+    "work_type",
+    "Residence_type",
+    "avg_glucose_level",
+    "bmi",
+    "smoking_status"
+  ],
+  "encoding_maps": {
+    "gender": {
+      "Male": 0,
+      "Female": 1,
+      "Other": 2
+    },
+    "ever_married": {
+      "No": 0,
+      "Yes": 1
+    },
+    "work_type": {
+      "Private": 0,
+      "Self-employed": 1,
+      "Govt_job": 2,
+      "children": 3,
+      "Never_worked": 4
+    },
+    "Residence_type": {
+      "Urban": 0,
+      "Rural": 1
+    },
+    "smoking_status": {
+      "never smoked": 0,
+      "formerly smoked": 1,
+      "smokes": 2,
+      "Unknown": 3
+    }
+  },
+  "models": {
+    "decision_tree": {
+      "label": "Decision Tree",
+      "params": {
+        "max_depth": 4,
+        "class_weight": "balanced"
+      },
+      "needs_scaler": false,
+      "threshold": 0.5,
+      "metrics": {
+        "accuracy": 0.6526,
+        "precision": 0.108,
+        "recall": 0.84,
+        "f1": 0.1913,
+        "auc": 0.8305
+      }
+    },
+    "knn": {
+      "label": "kNN",
+      "params": {
+        "n_neighbors": 16,
+        "weights": "uniform"
+      },
+      "needs_scaler": true,
+      "threshold": 0.06,
+      "metrics": {
+        "accuracy": 0.637,
+        "precision": 0.1037,
+        "recall": 0.84,
+        "f1": 0.1846,
+        "auc": 0.7831
+      }
+    },
+    "svm": {
+      "label": "SVM",
+      "params": {
+        "kernel": "linear",
+        "C": 0.01,
+        "class_weight": "balanced"
+      },
+      "needs_scaler": true,
+      "threshold": 0.0,
+      "metrics": {
+        "accuracy": 0.726,
+        "precision": 0.1338,
+        "recall": 0.84,
+        "f1": 0.2308,
+        "auc": 0.8404
+      }
+    }
+  }
+}
