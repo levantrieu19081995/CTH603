@@ -1,0 +1,8 @@
+{
+  "name": "cth603",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/dev.js",
+    "dev": "node scripts/dev.js"
+  }
+}
